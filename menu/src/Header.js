@@ -16,10 +16,11 @@ export default class Header extends Component {
             <div className="header-top">
                 <span >
                         <Cascader onChange={this.onChange}>
-                        <a className="span-cilck">Change city</a>
+                        <a className="span-cilck"> RECEPTIONIST</a>
                     </Cascader>
                 </span>
             </div>
         )
     }
 }
+
