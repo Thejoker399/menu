@@ -1,21 +1,31 @@
+
 @import '~antd/dist/antd.css';
 
-body{
-    margin: 0px;
+
+.media{
+    width: 970px;
 }
 .header-top{
     width: auto;
-    height: 60px;
+    height: auto;
     background-color: black;
 }
 .span-cilck{
     color: gray;
-    font-size: 30px;
+    font-size: 20px;
     padding: 15px 15px;
+    margin-top: auto;
 
 }
 a{
     margin: 0px;
     transition: color .2s;
 
+}
+a:hover{
+    color: white;
+}
+.sider-left{
+    width:200px;
+    background: '#fff'
 }
