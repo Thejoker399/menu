@@ -27,3 +27,13 @@ a:hover{
     width:200px;
     background: '#fff'
 }
+.box{
+    display: flex;
+    flex-direction: row;
+}
+.box-one{
+    width: 50%;
+}
+.box-two{
+    width: 50%;
+}

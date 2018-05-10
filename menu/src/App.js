@@ -6,7 +6,7 @@ import Add from './Add'
 import Show from './Show'
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super()
     this.state = {
       lists: [
@@ -33,7 +33,7 @@ class App extends Component {
     }
 
   }
-  
+
 
   deleteMenu = (index) => {
     console.log('index', index)
@@ -41,10 +41,10 @@ class App extends Component {
     // console.log(arr)
     arr.splice(index, 1);
     // console.log(arr)
-    this.setState({lists: arr});
+    this.setState({ lists: arr });
   }
 
-  totalPrice =()=>{
+  totalPrice = () => {
 
   }
 
@@ -53,8 +53,15 @@ class App extends Component {
       <div>
         <Header />
         {console.log(...this.state.lists)}
-        <Add addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
-        <Show addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
+        <div className="box">
+          <div className="box-one">
+            <Add addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
+            <Show addMenu={this.addMenu} list={this.state.lists}  />
+          </div>
+          <div className="box-two">
+            <Show addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
+          </div>
+        </div>
         {/* <Header />
         <Add addMenu={this.addMenu} list={this.state.list} />
         <Total /> */}
