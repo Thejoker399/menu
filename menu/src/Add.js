@@ -61,7 +61,7 @@ class Add extends Component {
     render() {
         return (
             <div>
-                <Button type="primary" onClick={this.showModal} className="block">เพิ่มเมนู</Button>
+                {/* <Button type="primary" onClick={this.showModal} className="block">เพิ่มเมนู</Button>
                 <Modal
                     title="เพิ่มเมนู"
                     visible={this.state.visible}
@@ -78,7 +78,7 @@ class Add extends Component {
                         </div >
 
                     </form>
-                </Modal>
+                </Modal> */}
                 <div className="block">
                     <button onClick={this.clearAll}>clear</button>
                 </div>
