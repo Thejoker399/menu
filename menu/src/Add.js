@@ -1,21 +1,31 @@
 import React, { Component } from 'react';
 class Add extends Component {
     state={
-    //     list:[
-    //         { name: "ผัดไทย",price: "50 บาท" },
-    //         { name: "บะหมี่", price: "40 บาท" },
-    //         { name: "บะหมี่", price: "42 บาท" },
-    //         { name: "บะหมี่", price: "35 บาท" },
-    //         { name: "บะหมี่", price: "60 บาท" },
-    //         { name: "บะหมี่", price: "55 บาท" },
-    //         { name: "บะหมี่", price: "40 บาท" }
-    //     ],
+
         name:"",
         price:"",
     }
-    // ChangeTodo = (event) => {
-    //     this.setState({ menu: event.target.value })
-    // }
+     
+      
+       
+    
+       
+        setStateNumberRandom=(evt)=>{
+            this.setState({
+                numberRandom: evt.target.value
+            })
+        }
+       randommenu=()=>{
+           
+        const newlist = this.state.list
+        for(let i=0 ; i<this.state.numberRandom ; i++){
+            let randomlist = Math.floor(Math.random() * newlist.length);
+            console.log(newlist[randomlist])
+        }
+        
+        }  
+    
+ 
     addlist = (event) => {
         event.preventDefault()
         if (this.state.name !== '' && this.state.price !== '') {
@@ -27,14 +37,7 @@ class Add extends Component {
         }
     }
 
-    // addlistMenu =(event)=>{
-    //     event.preventDefault()
-    //     const menu = this.state.menu
-    //     if(menu){
-    //         this.props.addlist(menu)
-    //         this.setState({menu:''})
-    //     }  
-    // }
+
     onChangeName = (event) => {
         this.setState({ name: event.target.value })
     }
@@ -48,19 +51,17 @@ class Add extends Component {
                     <input type='text' onChange={this.onChangeName} />
                     <input type='number' min="1" onChange={this.onChangePrice} />
                     <button type='submit'>addlist</button>
+                    
                 </form>
-
-
                 <ul>
-          
                     {
-                    this.props.list.map((value, index) => <li key={`menu-${index}`}>{value.name}{value.price}ลบ</li>)
+                    // this.props.list.map((value, index) => <li key={`menu-${index}`}> {value.name}{value.price} <button onClick={() =>this.props.deleteMenu(index)}> ลบ </button></li>)
 
                     }
-              
-
-
                 </ul>
+                
+                <button onClick={this.clearAll}>clear</button>   
+               
             </div>
         );
     }
