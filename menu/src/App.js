@@ -65,7 +65,6 @@ class App extends Component {
         {/* <Header />
         <Add addMenu={this.addMenu} list={this.state.list} />
         <Total /> */}
-
       </div>
     );
   }
