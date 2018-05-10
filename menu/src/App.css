@@ -27,7 +27,19 @@ a:hover{
     width:200px;
     background: '#fff'
 }
+<<<<<<< HEAD
 .block{
     display: flex;
     margin-top: 50px;
+=======
+.box{
+    display: flex;
+    flex-direction: row;
+}
+.box-one{
+    width: 50%;
+}
+.box-two{
+    width: 50%;
+>>>>>>> 384faa955e90c2838b01b99abd69875a5beb752f
 }

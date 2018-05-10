@@ -76,8 +76,9 @@ class Add extends Component {
                     <button type='submit'>addlist</button>
 
                 </form>
-                <ul>
+                {/* <ul>
                     {
+<<<<<<< HEAD
                         // this.props.list.map((value, index) => <li key={`menu-${index}`}> {value.name}{value.price} <button onClick={() =>this.props.deleteMenu(index)}> ลบ </button></li>)
 
                     }
@@ -86,6 +87,15 @@ class Add extends Component {
                 <div className="block">
                 <button onClick={this.clearAll}>clear</button>
                 </div>
+=======
+                    this.props.list.map((value, index) => <li key={`menu-${index}`}> {value.name}{value.price} <button onClick={() =>this.props.deleteMenu(index)}> ลบ </button></li>)
+
+                    }
+                </ul> */}
+                
+                <button onClick={this.clearAll}>clear</button>   
+               
+>>>>>>> 384faa955e90c2838b01b99abd69875a5beb752f
             </div>
         );
     }
