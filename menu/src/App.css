@@ -27,11 +27,13 @@ a:hover{
     width:200px;
     background: '#fff'
 }
-<<<<<<< HEAD
 .block{
     display: flex;
-    margin-top: 50px;
-=======
+    margin: 30px 0px 0px 30px;
+}
+.row{
+    margin-bottom: 10px;
+}
 .box{
     display: flex;
     flex-direction: row;
@@ -41,5 +43,4 @@ a:hover{
 }
 .box-two{
     width: 50%;
->>>>>>> 384faa955e90c2838b01b99abd69875a5beb752f
 }

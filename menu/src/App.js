@@ -62,9 +62,6 @@ class App extends Component {
             <Show addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
           </div>
         </div>
-        {/* <Header />
-        <Add addMenu={this.addMenu} list={this.state.list} />
-        <Total /> */}
       </div>
     );
   }

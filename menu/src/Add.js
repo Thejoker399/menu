@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Modal, Button } from 'antd';
+import { Modal, Button, Icon } from 'antd';
+import { Input } from 'antd';
+
 class Add extends Component {
     state = {
 
@@ -12,14 +14,7 @@ class Add extends Component {
             visible: true,
         });
     }
-    handleOk = (e) => {
-        console.log(e);
-        this.setState({
-            visible: false,
-        });
-    }
     handleCancel = (e) => {
-        console.log(e);
         this.setState({
             visible: false,
         });
@@ -49,6 +44,10 @@ class Add extends Component {
             const price = `${this.state.price} บาท`
 
             this.props.addMenu(name, price)
+            this.setState({
+                visible: false,
+            });
+
         }
     }
 
@@ -62,40 +61,27 @@ class Add extends Component {
     render() {
         return (
             <div>
-                <Button type="primary" onClick={this.showModal}>Open</Button>
+                <Button type="primary" onClick={this.showModal} className="block">เพิ่มเมนู</Button>
                 <Modal
-                    title="Basic Modal"
+                    title="เพิ่มเมนู"
                     visible={this.state.visible}
-                    onOk={this.handleOk}
+                    onOk={this.addlist}
                     onCancel={this.handleCancel}
                 >
-             
-                <form onSubmit={this.addlist}>
-                    <input type='text' onChange={this.onChangeName} />
-                    <input type='number' min="1" onChange={this.onChangePrice} />
-                    <button type='submit'>addlist</button>
 
-                </form>
-                {/* <ul>
-                    {
-<<<<<<< HEAD
-                        // this.props.list.map((value, index) => <li key={`menu-${index}`}> {value.name}{value.price} <button onClick={() =>this.props.deleteMenu(index)}> ลบ </button></li>)
+                    <form onSubmit={this.addlist}>
+                        <div className="row">
+                        <p >ชื่อเมนู : </p><Input prefix={<Icon type="form" />} type='text' onChange={this.onChangeName} />
+                        </div>
+                        <div className="row">
+                        <p >ราคา : </p><Input prefix={<Icon type="credit-card" />}  type='number' min="1" onChange={this.onChangePrice} /> 
+                        </div >
 
-                    }
-                </ul>
+                    </form>
                 </Modal>
                 <div className="block">
-                <button onClick={this.clearAll}>clear</button>
+                    <button onClick={this.clearAll}>clear</button>
                 </div>
-=======
-                    this.props.list.map((value, index) => <li key={`menu-${index}`}> {value.name}{value.price} <button onClick={() =>this.props.deleteMenu(index)}> ลบ </button></li>)
-
-                    }
-                </ul> */}
-                
-                <button onClick={this.clearAll}>clear</button>   
-               
->>>>>>> 384faa955e90c2838b01b99abd69875a5beb752f
             </div>
         );
     }
