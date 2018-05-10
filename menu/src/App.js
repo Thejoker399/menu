@@ -25,7 +25,7 @@ class App extends Component {
       numberRandom: 0
     }
   }
-  
+
   addListShow = (index, value) => {
     let addList = value
     let price = value.price
@@ -138,10 +138,6 @@ class App extends Component {
             />
           </div>
         </div>
-        {/* <Header />
-        <Add addMenu={this.addMenu} list={this.state.list} />
-        <Total /> */}
-
       </div>
     );
   }
