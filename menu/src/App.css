@@ -27,3 +27,7 @@ a:hover{
     width:200px;
     background: '#fff'
 }
+.block{
+    display: flex;
+    margin-top: 50px;
+}
