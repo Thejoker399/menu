@@ -5,11 +5,6 @@ class Add extends Component {
         name:"",
         price:"",
     }
-     
-      
-       
-    
-       
         setStateNumberRandom=(evt)=>{
             this.setState({
                 numberRandom: evt.target.value
