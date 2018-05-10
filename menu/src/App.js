@@ -37,9 +37,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header />
+        {/* <Header />
         <Add addMenu={this.addMenu} list={this.state.list} />
-        <Total />
+        <Total /> */}
       </div>
     );
   }
