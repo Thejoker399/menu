@@ -51,16 +51,14 @@ class App extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
         <Header />
         {console.log(...this.state.lists)}
         <Add addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
         <Show addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
-=======
         {/* <Header />
         <Add addMenu={this.addMenu} list={this.state.list} />
         <Total /> */}
->>>>>>> feature/f_End
+
       </div>
     );
   }
