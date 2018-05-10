@@ -52,6 +52,7 @@ class App extends Component {
     return (
       <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Header />
         {console.log(...this.state.lists)}
         <Add addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
@@ -60,6 +61,9 @@ class App extends Component {
         {/* <Header />
         <Add addMenu={this.addMenu} list={this.state.list} />
         <Total /> */}
+>>>>>>> feature/f_End
+=======
+        
 >>>>>>> feature/f_End
       </div>
     );
