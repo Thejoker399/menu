@@ -52,6 +52,7 @@ class App extends Component {
     return (
       <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Header/>
         <Add addMenu={this.addMenu} list={this.state.list} />
         <Total />
@@ -61,6 +62,11 @@ class App extends Component {
         <Add addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
         <Show addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
 >>>>>>> cf04d989c49a68b2a98da5c5349f18ff4e1edc92
+=======
+        <Header />
+        <Add addMenu={this.addMenu} list={this.state.list} />
+        <Total />
+>>>>>>> feature/f_End
       </div>
     );
   }
