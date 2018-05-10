@@ -51,11 +51,6 @@ class App extends Component {
   render() {
     return (
       <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f6efeafb6d7cbb53dff4485f5c47eb4293daa3ca
         <Header />
         {console.log(...this.state.lists)}
         <Add addMenu={this.addMenu} list={this.state.lists} deleteMenu={this.deleteMenu} />
@@ -63,14 +58,6 @@ class App extends Component {
         {/* <Header />
         <Add addMenu={this.addMenu} list={this.state.list} />
         <Total /> */}
-<<<<<<< HEAD
->>>>>>> feature/f_End
-=======
-        
->>>>>>> feature/f_End
-=======
-
->>>>>>> f6efeafb6d7cbb53dff4485f5c47eb4293daa3ca
       </div>
     );
   }
