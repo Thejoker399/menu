@@ -3,6 +3,9 @@ import Header from './Header.js';
 import './App.css';
 import Add from './Add'
 import Show from './Show'
+import Random from './Random'
+import ClearAll from './ClearAll'
+// import  Button  from './Button'
 
 class App extends Component {
   constructor() {
@@ -54,7 +57,7 @@ class App extends Component {
     });
   }
 
-  deleteMenu = (index) => {
+  deleteMenu = (value,index) => {
     // console.log('index', index)
     const arr = [...this.state.lists]
     // console.log(arr)
@@ -136,22 +139,40 @@ class App extends Component {
             <Add
               addlist={this.addlist}
               list={this.state.lists}
-              deleteMenueiei={this.deleteMenu}
+              deleteMenu={this.deleteMenu}
               addListShow={this.addListShow}
               setStateNumberRandom={this.setStateNumberRandom}
               randommenu={this.randommenu}
               onChangeName={this.onChangeName}
               onChangePrice={this.onChangePrice}
             />
+             <div>
+          </div>  
+
+            <div>
+              <Random
+                randommenu={this.randommenu}
+                setStateNumberRandom={this.setStateNumberRandom}
+              />
+            </div>
+           
           </div>
+
+          
           <div className="box-two">
             <Show
               showList={this.state.showList}
               deleteList={this.deleteList}
               total={this.state.total}
-              clearAll={this.clearAll}
+            // clearAll={this.clearAll}
             />
+            <div>
+              <ClearAll
+                clearAll={this.clearAll}
+              />
+            </div>
           </div>
+
         </div>
       </div>
     );
