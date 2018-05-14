@@ -26,7 +26,8 @@ class App extends Component {
       price: "",
       total: 0,
       numberRandom: 0,
-      randomlist: []
+      randomlist: [],
+      totalRandom: []
     }
   }
 
@@ -38,7 +39,7 @@ class App extends Component {
     pushList.push(addList)
     this.setState({
       showList: this.state.showList.concat(pushList),
-      total: this.state.total + price
+      total: this.state.total+parseInt(price)
     })
     // console.log(this.state.showList)
     //total
@@ -80,15 +81,18 @@ class App extends Component {
       console.log(Math.random())
       let randomlist = Math.floor(Math.random() * newlist.length);
       let arr = this.state.randomlist
+      let totalRandom = this.state.totalRandom
+      console.log(newlist[randomlist].price)
       this.setState({
         randomlist: arr.push(newlist[randomlist]),
-        // total: this.state.total+newlist[randomlist.price]
+        totalRandom: totalRandom.push(newlist[randomlist].price)
       })
     }
-    console.log(this.state.randomlist)
     this.setState({
       showList: this.state.showList.concat(this.state.randomlist),
-      randomlist: []
+      total: this.state.total + this.state.totalRandom.reduce((sum,value)=> sum+value),
+      randomlist: [],
+      totalRandom: []
     })
   }
 
