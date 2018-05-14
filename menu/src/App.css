@@ -44,3 +44,10 @@ a:hover{
 .box-two{
     width: 50%;
 }
+.list{
+    list-style: none;
+    font-size: 1rem;
+}
+.distance{
+    margin-top: 30px;
+}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
-import Total from './Total';
 import './App.css';
 import Add from './Add'
 import Show from './Show'
@@ -27,7 +26,7 @@ class App extends Component {
       total: 0,
       numberRandom: 0,
       randomlist: [],
-      totalRandom: []
+      totalRandom: [],
     }
   }
 
@@ -39,7 +38,7 @@ class App extends Component {
     pushList.push(addList)
     this.setState({
       showList: this.state.showList.concat(pushList),
-      total: this.state.total+parseInt(price)
+      total: this.state.total + price
     })
     // console.log(this.state.showList)
     //total
@@ -115,7 +114,7 @@ class App extends Component {
       let list = []
       list.push(menu)
       this.setState({
-        lists: this.state.lists.concat(list)
+        lists: this.state.lists.concat(list),       
       })
 
     }
@@ -134,6 +133,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+
         <div className="box">
           <div className="box-one">
             <Add
