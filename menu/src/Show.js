@@ -5,6 +5,7 @@ class Show extends Component {
     render() {
         return (
             <div>
+                
                 {/* <button onClick={this.props.clearAll}>clear</button> */}
                  <ul>
                      {this.props.showList.map((value,index)=>{

@@ -38,7 +38,7 @@ class App extends Component {
     pushList.push(addList)
     this.setState({
       showList: this.state.showList.concat(pushList),
-      total: this.state.total + price
+      total: this.state.total +parseInt(price)
     })
     // console.log(this.state.showList)
     //total
@@ -62,7 +62,7 @@ class App extends Component {
     const arr = [...this.state.lists]
     // console.log(arr)
     arr.splice(index, 1);
-    // console.log(arr)
+    console.log(arr)
     this.setState({
       lists: arr
     });
@@ -144,20 +144,11 @@ class App extends Component {
               onChangeName={this.onChangeName}
               onChangePrice={this.onChangePrice}
             />
-             <div>
-          </div>  
-
-            <div>
-              <Random
+             <Random
                 randommenu={this.randommenu}
                 setStateNumberRandom={this.setStateNumberRandom}
-               
               />
-            </div>
-           
-          </div>
-
-          
+            </div>       
           <div className="box-two">
             <Show
               showList={this.state.showList}
