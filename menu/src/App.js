@@ -12,17 +12,18 @@ class App extends Component {
       lists: [
         { name: "ผัดไทย", price: 50 },
         { name: "บะหมี่", price: 40 },
-        { name: "บะหมี่", price: 42 },
-        { name: "บะหมี่", price: 35 },
-        { name: "บะหมี่", price: 60 },
-        { name: "บะหมี่", price: 55 },
-        { name: "บะหมี่", price: 40 }
+        { name: "ผัดผักคะน้า", price: 42 },
+        { name: "ผัดกระเพรา", price: 35 },
+        { name: "สุกี้น้ำ", price: 60 },
+        { name: "สุกี้แห้ง", price: 55 },
+        { name: "ข้าวมันไก่", price: 40 }
       ],
       showList: [],
       name: "",
       price: "",
       total: 0,
-      numberRandom: 0
+      numberRandom: 0,
+      randomlist: []
     }
   }
 
@@ -55,7 +56,7 @@ class App extends Component {
 
   deleteMenu = (index) => {
     // console.log('index', index)
-    let arr = [...this.state.lists]
+    const arr = [...this.state.lists]
     // console.log(arr)
     arr.splice(index, 1);
     // console.log(arr)
@@ -70,13 +71,22 @@ class App extends Component {
     })
   }
 
-  randommenu = () => {
+  randommenu = (event) => {
     const newlist = this.state.lists
     for (let i = 0; i < this.state.numberRandom; i++) {
+      console.log(Math.random())
       let randomlist = Math.floor(Math.random() * newlist.length);
-      // console.log(newlist[randomlist])
+      let arr = this.state.randomlist
+      this.setState({
+        randomlist: arr.push(newlist[randomlist]),
+        // total: this.state.total+newlist[randomlist.price]
+      })
     }
-
+    console.log(this.state.randomlist)
+    this.setState({
+      showList: this.state.showList.concat(this.state.randomlist),
+      randomlist: []
+    })
   }
 
   onChangeName = (event) => {
@@ -89,7 +99,8 @@ class App extends Component {
     this.setState({ price: event.target.value })
   }
 
-  addlist = () => {
+  addlist = (event) => {
+    event.preventDefault()
     if (this.state.name !== '' && this.state.price !== '') {
       const name = this.state.name
       const price = this.state.price
@@ -121,7 +132,7 @@ class App extends Component {
             <Add
               addlist={this.addlist}
               list={this.state.lists}
-              deleteMenu={this.deleteMenu}
+              deleteMenueiei={this.deleteMenu}
               addListShow={this.addListShow}
               setStateNumberRandom={this.setStateNumberRandom}
               randommenu={this.randommenu}
