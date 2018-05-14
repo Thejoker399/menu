@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Modal, Button, Input, Icon } from 'antd';
+import { Modal, Button, Icon } from 'antd';
+import { Input } from 'antd';
+import ButtonCustom from './Button';
 
 class Add extends Component {
     state = { visible: false }
@@ -34,6 +37,7 @@ class Add extends Component {
 
                     {
                         this.props.list.map((value, index) => {
+
                             return <li key={`menu-${index}`}>
                                 <ButtonCustom valueButton={'+'} evt={this.props.addListShow} index={index} value={value}/>
                                 {value.name}{value.price} บาท
@@ -45,6 +49,9 @@ class Add extends Component {
                                 <button onClick={() => this.props.addListShow(index, value)}> + </button>
                                 {value.name}{value.price} บาท <button onClick={() => this.props.deleteMenu(index)}> ลบ </button>
                             </li>
+
+                            return <li key={`menu-${index}`}><button onClick={() => this.props.addListShow(index, value)}> + </button>  {value.name}{value.price} บาท <button onClick={() => this.props.deleteMenu(index)}> ลบ </button></li>
+
                         })
                     }
                 </ul>

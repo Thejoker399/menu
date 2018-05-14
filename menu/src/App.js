@@ -38,7 +38,7 @@ class App extends Component {
     pushList.push(addList)
     this.setState({
       showList: this.state.showList.concat(pushList),
-      total: this.state.total + price
+      total: this.state.total + parseInt(price)
     })
     // console.log(this.state.showList)
     //total
@@ -53,7 +53,7 @@ class App extends Component {
     // console.log(arr)
     this.setState({
       showList: arr,
-      total: this.state.total - price
+      total: this.state.total - parseInt(price)
     });
   }
 
@@ -77,11 +77,9 @@ class App extends Component {
   randommenu = (event) => {
     const newlist = this.state.lists
     for (let i = 0; i < this.state.numberRandom; i++) {
-      console.log(Math.random())
       let randomlist = Math.floor(Math.random() * newlist.length);
       let arr = this.state.randomlist
       let totalRandom = this.state.totalRandom
-      console.log(newlist[randomlist].price)
       this.setState({
         randomlist: arr.push(newlist[randomlist]),
         totalRandom: totalRandom.push(newlist[randomlist].price)
