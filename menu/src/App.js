@@ -57,7 +57,7 @@ class App extends Component {
     });
   }
 
-  deleteMenu = (value,index) => {
+  deleteMenu = (index,value) => {
     // console.log('index', index)
     const arr = [...this.state.lists]
     // console.log(arr)
@@ -112,9 +112,8 @@ class App extends Component {
       let list = []
       list.push(menu)
       this.setState({
-        lists: this.state.lists.concat(list),       
+        lists: this.state.lists.concat(list),      
       })
-
     }
   }
 
