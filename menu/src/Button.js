@@ -4,11 +4,9 @@ class Button extends Component {
     render() {
 
         return (
-            <div>
-                <button onClick={() => this.props.evt}> {this.props.valueButton}} </button>
-            </div >
+                <button onClick={() => this.props.evt(this.props.index,this.props.value)}> {this.props.valueButton} </button>
         );
     }
 }
 
-export default Button;
+export default Button;  

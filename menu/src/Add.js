@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, Button, Icon } from 'antd';
 import { Input } from 'antd';
-import ButtonCustom  from './Button';
+import ButtonCustom from './Button';
 
 class Add extends Component {
     render() {
@@ -16,10 +16,9 @@ class Add extends Component {
                     {
                         this.props.list.map((value, index) => {
                             return <li key={`menu-${index}`}>
-                                <button onClick={() => this.props.addListShow(index, value)}> + </button> 
+                                <ButtonCustom valueButton={'+'} evt={this.props.addListShow} index={index} value={value}/>
                                 {value.name}{value.price} บาท
-                                <ButtonCustom valueButton={'ลบ'} evt={this.props.deleteMenu(value, index)} />
-                            
+                                <ButtonCustom valueButton={'ลบ'} evt={this.props.deleteMenu} index={index} value={value} />
                             </li>
                         })
                     }

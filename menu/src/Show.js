@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ButtonCustom from './Button';
 
 class Show extends Component {
     render() {
@@ -10,7 +11,7 @@ class Show extends Component {
                          return (
                          <li key={`menu-${index}`}>
                          {value.name}{value.price} บาท 
-                         <button onClick={() => this.props.deleteList(index,value)}> ลบ </button></li>)
+                         <ButtonCustom valueButton={'ลบ'} evt={this.props.deleteList} index={index} value={value} /></li>)
                      })}
                  </ul>
                  <p> {this.props.total} </p>

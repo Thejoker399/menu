@@ -5,8 +5,8 @@ import './App.css';
 import Add from './Add'
 import Show from './Show'
 import Random from './Random'
-import ClearAll from './ClearAll'
-// import  Button  from './Button'
+import { Button } from 'antd';
+import ButtonCustom from './Button'
 
 class App extends Component {
   constructor() {
@@ -142,7 +142,7 @@ class App extends Component {
               deleteMenu={this.deleteMenu}
               addListShow={this.addListShow}
               setStateNumberRandom={this.setStateNumberRandom}
-              randommenu={this.randommenu}
+              // randommenu={this.randommenu}
               onChangeName={this.onChangeName}
               onChangePrice={this.onChangePrice}
             />
@@ -162,14 +162,13 @@ class App extends Component {
           <div className="box-two">
             <Show
               showList={this.state.showList}
-              deleteList={this.deleteList}
               total={this.state.total}
             // clearAll={this.clearAll}
             />
             <div>
-              <ClearAll
-                clearAll={this.clearAll}
-              />
+             <ButtonCustom 
+             valueButton={'Clear'} evt={this.clearAll}  
+             />
             </div>
           </div>
 
