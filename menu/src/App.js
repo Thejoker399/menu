@@ -38,7 +38,7 @@ class App extends Component {
     pushList.push(addList)
     this.setState({
       showList: this.state.showList.concat(pushList),
-      total: this.state.total + parseInt(price)
+      total: this.state.total + price
     })
     // console.log(this.state.showList)
     //total
@@ -53,7 +53,7 @@ class App extends Component {
     // console.log(arr)
     this.setState({
       showList: arr,
-      total: this.state.total - parseInt(price)
+      total: this.state.total - price
     });
   }
 
