@@ -153,6 +153,7 @@ class App extends Component {
               <Random
                 randommenu={this.randommenu}
                 setStateNumberRandom={this.setStateNumberRandom}
+               
               />
             </div>
            
@@ -163,6 +164,7 @@ class App extends Component {
             <Show
               showList={this.state.showList}
               total={this.state.total}
+              deleteList={this.deleteList}
             // clearAll={this.clearAll}
             />
             <div>
