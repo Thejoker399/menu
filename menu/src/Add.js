@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Modal, Button, Icon } from 'antd';
-import { Input } from 'antd';
 
 class Add extends Component {
     render() {
