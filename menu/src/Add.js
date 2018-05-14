@@ -38,11 +38,7 @@ class Add extends Component {
                         })
                     }
                 </ul>
-                <input onChange={this.props.setStateNumberRandom} />
-                <button onClick={this.props.randommenu}> random </button>
-                {/* <p>{}</p> */}
-
-                <Button type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
+                <Button  className="button-width" type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
                 <Modal
                     title="เพิ่มเมนู"
                     visible={this.state.visible}
