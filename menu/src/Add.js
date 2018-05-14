@@ -36,19 +36,19 @@ class Add extends Component {
 
                     {
                         this.props.list.map((value, index) => {
+
                             return <li key={`menu-${index}`}>
                                 <ButtonCustom valueButton={'+'} evt={this.props.addListShow} index={index} value={value}/>
                                 {value.name}{value.price} บาท
                                 <ButtonCustom valueButton={'ลบ'} evt={this.props.deleteMenu} index={index} value={value} />
                             </li>
+
+                            return <li key={`menu-${index}`}><button onClick={() => this.props.addListShow(index, value)}> + </button>  {value.name}{value.price} บาท <button onClick={() => this.props.deleteMenu(index)}> ลบ </button></li>
+
                         })
                     }
                 </ul>
-                <input onChange={this.props.setStateNumberRandom} />
-                <button onClick={this.props.randommenu}> random </button>
-                {/* <p>{}</p> */}
-
-                <Button type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
+                <Button  className="button-width" type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
                 <Modal
                     title="เพิ่มเมนู"
                     visible={this.state.visible}
