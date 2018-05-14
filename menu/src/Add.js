@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Modal, Button, Input, Icon } from 'antd';
-import { Modal, Button, Icon } from 'antd';
-import { Input } from 'antd';
 import ButtonCustom from './Button';
 
 class Add extends Component {
