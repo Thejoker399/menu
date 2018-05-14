@@ -151,6 +151,7 @@ class App extends Component {
               <Random
                 randommenu={this.randommenu}
                 setStateNumberRandom={this.setStateNumberRandom}
+               
               />
             </div>
            

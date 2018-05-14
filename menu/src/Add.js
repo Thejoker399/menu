@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Modal, Button, Input, Icon } from 'antd';
 import { Modal, Button, Icon } from 'antd';
 import { Input } from 'antd';
 import ButtonCustom from './Button';
@@ -42,13 +43,19 @@ class Add extends Component {
                                 {value.name}{value.price} บาท
                                 <ButtonCustom valueButton={'ลบ'} evt={this.props.deleteMenu} index={index} value={value} />
                             </li>
+                            return <li key={`menu-${index}`}><button onClick={() => this.props.addListShow(index, value)}> + </button>  {value.name}{value.price} บาท <button onClick={() => this.props.deleteMenueiei(index)}> ลบ </button></li>
+                            return <li key={`menu-${index}`}><button onClick={() => this.props.addListShow(index, value)}> + </button>  {value.name}{value.price} บาท <button onClick={() => this.props.deleteMenu(index)}> ลบ </button></li>
+                            return <li key={`menu-${index}`}>
+                                <button onClick={() => this.props.addListShow(index, value)}> + </button>
+                                {value.name}{value.price} บาท <button onClick={() => this.props.deleteMenu(index)}> ลบ </button>
+                            </li>
 
                             return <li key={`menu-${index}`}><button onClick={() => this.props.addListShow(index, value)}> + </button>  {value.name}{value.price} บาท <button onClick={() => this.props.deleteMenu(index)}> ลบ </button></li>
 
                         })
                     }
                 </ul>
-                <Button  className="button-width" type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
+                <Button className="button-width" type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
                 <Modal
                     title="เพิ่มเมนู"
                     visible={this.state.visible}
@@ -61,7 +68,7 @@ class Add extends Component {
                     </div>
                     <div className="distance">
                         <p>ราคาไม่ต่ำกว่า 0 : </p>
-                        <Input prefix={<Icon type="credit-card" />}  type='number' min="1" onChange={this.props.onChangePrice} />
+                        <Input prefix={<Icon type="credit-card" />} type='number' min="1" onChange={this.props.onChangePrice} />
                     </div>
                 </Modal>
             </div>
