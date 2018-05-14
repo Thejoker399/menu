@@ -57,7 +57,7 @@ class App extends Component {
     });
   }
 
-  deleteMenu = (value,index) => {
+  deleteMenu = (index,value) => {
     // console.log('index', index)
     const arr = [...this.state.lists]
     // console.log(arr)
