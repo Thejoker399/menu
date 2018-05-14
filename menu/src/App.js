@@ -6,7 +6,7 @@ import Add from './Add'
 import Show from './Show'
 import Random from './Random'
 import ClearAll from './ClearAll'
-import ButtonDelete from './ButtonDelete'
+// import  Button  from './Button'
 
 class App extends Component {
   constructor() {
@@ -58,7 +58,7 @@ class App extends Component {
     });
   }
 
-  deleteMenu = (index) => {
+  deleteMenu = (value,index) => {
     // console.log('index', index)
     const arr = [...this.state.lists]
     // console.log(arr)
@@ -139,16 +139,14 @@ class App extends Component {
             <Add
               addlist={this.addlist}
               list={this.state.lists}
-              // deleteMenu={this.deleteMenu}
+              deleteMenu={this.deleteMenu}
               addListShow={this.addListShow}
-              // setStateNumberRandom={this.setStateNumberRandom}
-              // randommenu={this.randommenu}
+              setStateNumberRandom={this.setStateNumberRandom}
+              randommenu={this.randommenu}
               onChangeName={this.onChangeName}
               onChangePrice={this.onChangePrice}
             />
              <div>
-            <ButtonDelete
-              deleteMenueiei={this.deleteMenu}/>
           </div>  
 
             <div>
