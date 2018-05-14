@@ -4,6 +4,9 @@ import Total from './Total';
 import './App.css';
 import Add from './Add'
 import Show from './Show'
+import Random from './Random'
+import ClearAll from './ClearAll'
+import ButtonDelete from './ButtonDelete'
 
 class App extends Component {
   constructor() {
@@ -35,22 +38,22 @@ class App extends Component {
     pushList.push(addList)
     this.setState({
       showList: this.state.showList.concat(pushList),
-      total: this.state.total+price
+      total: this.state.total + price
     })
     // console.log(this.state.showList)
     //total
     console.log(this.state.total)
   }
 
-  deleteList = (index,value) => {
+  deleteList = (index, value) => {
     let price = value.price
     let arr = [...this.state.showList]
     // console.log(arr)
     arr.splice(index, 1);
     // console.log(arr)
-    this.setState({ 
-      showList: arr ,
-      total : this.state.total-price
+    this.setState({
+      showList: arr,
+      total: this.state.total - price
     });
   }
 
@@ -60,8 +63,8 @@ class App extends Component {
     // console.log(arr)
     arr.splice(index, 1);
     // console.log(arr)
-    this.setState({ 
-      lists: arr 
+    this.setState({
+      lists: arr
     });
   }
 
@@ -116,7 +119,7 @@ class App extends Component {
 
   clearAll = () => {
     let clearlist = this.state.showList
-    clearlist.splice(0,clearlist.length)
+    clearlist.splice(0, clearlist.length)
     this.setState({
       showList: clearlist,
       total: 0
@@ -132,22 +135,42 @@ class App extends Component {
             <Add
               addlist={this.addlist}
               list={this.state.lists}
-              deleteMenueiei={this.deleteMenu}
+              // deleteMenu={this.deleteMenu}
               addListShow={this.addListShow}
-              setStateNumberRandom={this.setStateNumberRandom}
-              randommenu={this.randommenu}
+              // setStateNumberRandom={this.setStateNumberRandom}
+              // randommenu={this.randommenu}
               onChangeName={this.onChangeName}
               onChangePrice={this.onChangePrice}
             />
+             <div>
+            <ButtonDelete
+              deleteMenueiei={this.deleteMenu}/>
+          </div>  
+
+            <div>
+              <Random
+                randommenu={this.randommenu}
+                setStateNumberRandom={this.setStateNumberRandom}
+              />
+            </div>
+           
           </div>
+
+          
           <div className="box-two">
-            <Show 
-              showList={this.state.showList} 
-              deleteList={this.deleteList} 
+            <Show
+              showList={this.state.showList}
+              deleteList={this.deleteList}
               total={this.state.total}
-              clearAll={this.clearAll}
+            // clearAll={this.clearAll}
             />
+            <div>
+              <ClearAll
+                clearAll={this.clearAll}
+              />
+            </div>
           </div>
+
         </div>
       </div>
     );
