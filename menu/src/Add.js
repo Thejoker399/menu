@@ -41,6 +41,7 @@ class Add extends Component {
                     {
                         this.props.list.map((value, index) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
                             return <li key={`menu-${index}`}>
                                 <ButtonCustom valueButton={'+'} evt={this.props.addListShow} index={index} value={value}/>
                                 {value.name}{value.price} บาท
@@ -49,14 +50,13 @@ class Add extends Component {
 =======
                             return <li key={`menu-${index}`}><button onClick={() => this.props.addListShow(index, value)}> + </button>  {value.name}{value.price} บาท <button onClick={() => this.props.deleteMenueiei(index)}> ลบ </button></li>
 >>>>>>> c8ccccd5f20a7d5d021807e58b3b63c0f939363e
+=======
+                            return <li key={`menu-${index}`}><button onClick={() => this.props.addListShow(index, value)}> + </button>  {value.name}{value.price} บาท <button onClick={() => this.props.deleteMenu(index)}> ลบ </button></li>
+>>>>>>> feature/antd
                         })
                     }
                 </ul>
-                <input onChange={this.props.setStateNumberRandom} />
-                <button onClick={this.props.randommenu}> random </button>
-                {/* <p>{}</p> */}
-
-                <Button type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
+                <Button  className="button-width" type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
                 <Modal
                     title="เพิ่มเมนู"
                     visible={this.state.visible}
