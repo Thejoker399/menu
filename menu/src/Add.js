@@ -24,8 +24,8 @@ class Add extends Component {
 
     render() {
         return (
-            <div className="ADD">
-             <div className="box-button">
+            <div className="ADD font">
+                <div className="box-button">
                     <Button className="button-width" type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
                     <Modal
                         title="เพิ่มเมนู"
@@ -68,7 +68,7 @@ class Add extends Component {
                                             {value.name}{value.price} บาท
                                    </div>
                                         <div className="box-delete">
-                                            <ButtonCustom 
+                                            <ButtonCustom
                                                 type="danger"
                                                 valueButton={'ลบ'}
                                                 evt={this.props.deleteMenu}
@@ -78,11 +78,17 @@ class Add extends Component {
                                     </div>
                                 </li>
 
-                        })
-                    }
-                </ul>
+                            })
+                        }
+                    </ul>
                 </div>
-               
+                <style jsx> {`
+                    @import url('https://fonts.googleapis.com/css?family=Prompt');
+                    .font {
+                        font-family: 'Prompt', sans-serif;
+                    }
+                    `}
+                </style>
             </div>
         );
     }

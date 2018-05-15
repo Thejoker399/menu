@@ -12,6 +12,7 @@ class Index extends Component {
                 </Card>
               </Col>
             </Row>
+            
           </div>
         );
     }
