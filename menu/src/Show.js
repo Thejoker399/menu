@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ButtonCustom from './Button';
-
+import { Button } from 'antd';
 class Show extends Component {
     render() {
         return (
@@ -21,7 +21,13 @@ class Show extends Component {
                                     {value.name}{value.price} บาท
                          </div>
                                 <div className="box-delete">
-                                    <ButtonCustom valueButton={'ลบ'} evt={this.props.deleteList} index={index} value={value} />
+                                    <ButtonCustom 
+                                    type="danger"
+                                    valueButton={'ลบ'} 
+                                    evt={this.props.deleteList} 
+                                    index={index} 
+                                    value={value} 
+                                    />
                                 </div>
                             </div>
                         </li>
