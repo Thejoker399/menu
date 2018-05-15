@@ -6,6 +6,7 @@ import Show from './Show'
 import Random from './Random'
 import ButtonCustom from './Button'
 import Index from '../src/layout/index'
+import Showlist from '../src/layout/Show'
 
 class App extends Component {
   constructor() {
@@ -133,7 +134,7 @@ class App extends Component {
         <Header />
         <div className="box">
           <div className="box-one">
-            <Index>
+          <Index>
               <Add
                 addlist={this.addlist}
                 list={this.state.lists}
@@ -149,21 +150,30 @@ class App extends Component {
                 setStateNumberRandom={this.setStateNumberRandom}
               />
               </Index>
+            
           </div>
-         
-            <div className="box-two">
+          <Showlist>
+          <div >
+           
               <Show
                 showList={this.state.showList}
                 total={this.state.total}
                 deleteList={this.deleteList}
               >
+
                 <ButtonCustom
                   valueButton={'Clear'} evt={this.clearAll}
                 />
               </Show>
-            </div>
-
           </div>
+          
+          </Showlist>
+            
+          </div>
+         
+            
+
+          
           <style jsx> {`
           @import url('https://fonts.googleapis.com/css?family=Prompt');
           .font {

@@ -6,8 +6,8 @@ class Index extends Component {
         return (
             <div style={{ background: '#fff', padding: '60px' }}>
             <Row gutter={20}>
-              <Col span={25}>
-                <Card title="Menu Food"  style={{ boxShadow: '1px 1px 10px #ccc'}}>
+              <Col span={30}>
+                <Card title="Menu Food"  style={{ boxShadow: '1px 1px 10px #ccc' }}>
                     {this.props.children}
                 </Card>
               </Col>
