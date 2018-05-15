@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import { Card } from 'antd';
+import { Card, Col, Row } from 'antd';
+
 class Showlist extends Component {
     render() {
         return (
             <div>
-                <div style={{ background: '#ECECEC', padding: '30px' }}>
-                    <Card title="Card title" bordered={false} style={{ width: 300 }}>
-                        <p>Card content</p>
-                        <p>Card content</p>
-                        <p>Card content</p>
+                <div style={{ background: '#fff', padding: '60px' }}>
+                <Row gutter={20}>
+              <Col span={25}>
+                    <Card title="รายการอาหาร" bordered={true} style={{ width: 518 ,boxShadow:'1px 1px 10px #ccc' }}>
+                       {this.props.children}
                     </Card>
+                    </Col>
+            </Row>
                 </div>
             </div>
         );
