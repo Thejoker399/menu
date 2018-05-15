@@ -4,7 +4,6 @@ import './App.css';
 import Add from './Add'
 import Show from './Show'
 import Random from './Random'
-import { Button } from 'antd';
 import ButtonCustom from './Button'
 
 class App extends Component {
@@ -112,9 +111,8 @@ class App extends Component {
       let list = []
       list.push(menu)
       this.setState({
-        lists: this.state.lists.concat(list),       
+        lists: this.state.lists.concat(list),      
       })
-
     }
   }
 
