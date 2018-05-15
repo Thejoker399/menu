@@ -59,7 +59,6 @@ class Add extends Component {
                                     </div>
                                 </li>
 
-<<<<<<< HEAD
                             return <li key={`menu-${index}`}>
                                 <ButtonCustom  valueButton={'+'} evt={this.props.addListShow} index={index} value={value}/>
                                 {value.name}{value.price} บาท
@@ -77,26 +76,6 @@ class Add extends Component {
                         })
                     }
                 </ul>
-                <Button className="button-width" type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
-                <Modal
-                    title="เพิ่มเมนู"
-                    visible={this.state.visible}
-                    onOk={this.props.addlist}
-                    onCancel={this.handleCancel}
-                >
-                    <div >
-                        <p>ชื่อเมนู * : </p>
-                        <Input prefix={<Icon type="profile" />} type='text' onChange={this.props.onChangeName} />
-                    </div>
-                    <div className="distance">
-                        <p>ราคาไม่ต่ำกว่า 0 : </p>
-                        <Input prefix={<Icon type="credit-card" />} type='number' min="1" onChange={this.props.onChangePrice} />
-                    </div>
-                </Modal>
-=======
-                            })
-                        }
-                    </ul>
                 </div>
                 <div className="box-button">
                     <Button className="button-width" type="primary" onClick={this.showModal}>เพิ่มเมนู</Button>
@@ -116,7 +95,6 @@ class Add extends Component {
                         </div>
                     </Modal>
                 </div>
->>>>>>> e14ac78695bef61896890955a13961539c90dde2
             </div>
         );
     }
