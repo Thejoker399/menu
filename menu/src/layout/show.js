@@ -6,13 +6,13 @@ class Showlist extends Component {
         return (
             <div>
                 <div style={{ background: '#fff', padding: '60px' }}>
-                <Row gutter={20}>
-              <Col span={25}>
-                    <Card title="รายการอาหาร" bordered={true} style={{ width: 518 ,boxShadow:'1px 1px 10px #ccc' }}>
-                       {this.props.children}
-                    </Card>
-                    </Col>
-            </Row>
+                    <Row gutter={20}>
+                        <Col span={25}>
+                            <Card title="รายการอาหาร" bordered={true} style={{ width: 518, boxShadow: '1px 1px 10px #ccc' }}>
+                                {this.props.children}
+                            </Card>
+                        </Col>
+                    </Row>
                 </div>
             </div>
         );

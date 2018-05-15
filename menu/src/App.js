@@ -152,7 +152,7 @@ class App extends Component {
             
           </div>
           <Showlist>
-          <div className="box-two">
+          <div >
            
               <Show
                 showList={this.state.showList}
@@ -164,8 +164,8 @@ class App extends Component {
                   valueButton={'Clear'} evt={this.clearAll}
                 />
               </Show>
-          
           </div>
+          
           </Showlist>
             
           </div>
