@@ -5,7 +5,15 @@ class Buttons extends Component {
     render() {
 
         return (
-                <Button type="primary"  onClick={() => this.props.evt(this.props.index,this.props.value)}> {this.props.valueButton} </Button>
+            <div>
+                <Button type={this.props.type} onClick={() => this.props.evt(this.props.index,this.props.value)}> {this.props.valueButton} </Button>
+            <style global jsx> {`
+                .ant-btn-danger {
+                    background-color: #fff;
+                }
+            `}
+            </style>
+            </div>
         );
     }
 }
