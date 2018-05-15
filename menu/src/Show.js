@@ -4,18 +4,29 @@ import ButtonCustom from './Button';
 class Show extends Component {
     render() {
         return (
+            <div className="box-li">
             <div>
-                
-                {/* <button onClick={this.props.clearAll}>clear</button> */}
-                 <ul>
-                     {this.props.showList.map((value,index)=>{
-                         return (
-                         <li key={`menu-${index}`}>
-                         {value.name}{value.price} บาท 
-                         <ButtonCustom valueButton={'ลบ'} evt={this.props.deleteList} index={index} value={value} /></li>)
-                     })}
-                 </ul>
-                 <p> {this.props.total} </p>
+            <div>
+             {this.props.children}
+             </div>
+             <div className="box-total">
+            <p>รวม: {this.props.total} </p>
+            </div>
+            </div>
+                <ul className="list">
+                    {this.props.showList.map((value, index) => {
+                        return <li key={`menu-${index}`}>
+                            <div className="box-menu">
+                                <div className="box-list-menu">
+                                    {value.name}{value.price} บาท
+                         </div>
+                                <div className="box-delete">
+                                    <ButtonCustom valueButton={'ลบ'} evt={this.props.deleteList} index={index} value={value} />
+                                </div>
+                            </div>
+                        </li>
+                    })}
+                </ul>
             </div>
         );
     }
