@@ -6,7 +6,7 @@ import Show from './Show'
 import Random from './Random'
 import ButtonCustom from './Button'
 import Index from '../src/layout/index'
-import Showlist from '../src/layout/Show'
+import Showlist from '../src/layout/show'
 
 class App extends Component {
   constructor() {
