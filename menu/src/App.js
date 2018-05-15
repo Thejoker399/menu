@@ -128,7 +128,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="font">
         <Header />
         <div className="box">
           <div className="box-one">
@@ -163,6 +163,13 @@ class App extends Component {
             </div>
 
           </div>
+          <style jsx> {`
+          @import url('https://fonts.googleapis.com/css?family=Prompt');
+          .font {
+            font-family: 'Prompt', sans-serif;
+          }
+          `}
+          </style>
         </div>
         );
       }
