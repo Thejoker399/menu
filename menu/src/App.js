@@ -6,7 +6,7 @@ import Show from './Show'
 import Random from './Random'
 import ButtonCustom from './Button'
 import Index from '../src/layout/index'
-import Showlist from '../src/layout/Show'
+import Showlist from '../src/layout/show'
 
 class App extends Component {
   constructor() {
@@ -77,6 +77,7 @@ class App extends Component {
 
   randommenu = (event) => {
     const newlist = this.state.lists
+    if (this.state.numberRandom>0) {
     for (let i = 0; i < this.state.numberRandom; i++) {
       let randomlist = Math.floor(Math.random() * newlist.length);
       let arr = this.state.randomlist
@@ -92,6 +93,7 @@ class App extends Component {
       randomlist: [],
       totalRandom: [],
     })
+  }
   }
 
   onChangeName = (event) => {
