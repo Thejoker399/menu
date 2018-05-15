@@ -83,14 +83,14 @@ class App extends Component {
       let totalRandom = this.state.totalRandom
       this.setState({
         randomlist: arr.push(newlist[randomlist]),
-        totalRandom: totalRandom.push(newlist[randomlist].price)
+        totalRandom: totalRandom.push(newlist[randomlist].price),
       })
     }
     this.setState({
       showList: this.state.showList.concat(this.state.randomlist),
       total: this.state.total + this.state.totalRandom.reduce((sum, value) => sum + value),
       randomlist: [],
-      totalRandom: []
+      totalRandom: [],
     })
   }
 
