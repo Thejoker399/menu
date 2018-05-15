@@ -4,6 +4,7 @@ import { Button } from 'antd';
 class Show extends Component {
     render() {
         return (
+<<<<<<< HEAD
             <div className="box-li">
                 <div>
                     <div>
@@ -13,6 +14,17 @@ class Show extends Component {
                         <p>รวม: {this.props.total} </p>
                     </div>
                 </div>
+=======
+            <div className="box-li" style={{marginTop: '10%'}}>
+            <div>
+            <div>
+             {this.props.children}
+             </div>
+             <div className="box-total">
+            <p>รวม: {this.props.total} </p>
+            </div>
+            </div>
+>>>>>>> b6fccc3a2e8be2c0200482d98757f48320655ae5
                 <ul className="list">
                     {this.props.showList.map((value, index) => {
                         return <li key={`menu-${index}`}>
