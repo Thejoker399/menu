@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import { Button} from 'antd';
 
-class Button extends Component {
+class Buttons extends Component {
     render() {
 
         return (
-                <button onClick={() => this.props.evt(this.props.index,this.props.value)}> {this.props.valueButton} </button>
+                <Button type="primary"  onClick={() => this.props.evt(this.props.index,this.props.value)}> {this.props.valueButton} </Button>
         );
     }
 }
 
-export default Button;  
+export default Buttons;  

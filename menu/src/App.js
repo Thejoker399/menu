@@ -4,7 +4,6 @@ import './App.css';
 import Add from './Add'
 import Show from './Show'
 import Random from './Random'
-import { Button } from 'antd';
 import ButtonCustom from './Button'
 
 class App extends Component {
@@ -112,9 +111,8 @@ class App extends Component {
       let list = []
       list.push(menu)
       this.setState({
-        lists: this.state.lists.concat(list),       
+        lists: this.state.lists.concat(list),      
       })
-
     }
   }
 
@@ -154,13 +152,11 @@ class App extends Component {
               showList={this.state.showList}
               total={this.state.total}
               deleteList={this.deleteList}
-            // clearAll={this.clearAll}
-            />
-            <div>
-             <ButtonCustom 
+            >
+            <ButtonCustom 
              valueButton={'Clear'} evt={this.clearAll}  
              />
-            </div>
+            </Show>
           </div>
 
         </div>
