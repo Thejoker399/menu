@@ -5,14 +5,14 @@ class Show extends Component {
     render() {
         return (
             <div className="box-li">
-            <div>
-            <div>
-             {this.props.children}
-             </div>
-             <div className="box-total">
-            <p>รวม: {this.props.total} </p>
-            </div>
-            </div>
+                <div>
+                    <div>
+                        {this.props.children}
+                    </div>
+                    <div className="box-total">
+                        <p>รวม: {this.props.total} </p>
+                    </div>
+                </div>
                 <ul className="list">
                     {this.props.showList.map((value, index) => {
                         return <li key={`menu-${index}`}>

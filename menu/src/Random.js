@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button,Input,Card, Col, Row  } from 'antd';
+import { Button,Input  } from 'antd';
 
 
 class Random extends Component {
