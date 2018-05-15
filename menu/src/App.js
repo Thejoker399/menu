@@ -154,13 +154,11 @@ class App extends Component {
               showList={this.state.showList}
               total={this.state.total}
               deleteList={this.deleteList}
-            // clearAll={this.clearAll}
-            />
-            <div>
-             <ButtonCustom 
+            >
+            <ButtonCustom 
              valueButton={'Clear'} evt={this.clearAll}  
              />
-            </div>
+            </Show>
           </div>
 
         </div>

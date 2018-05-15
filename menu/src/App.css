@@ -47,18 +47,50 @@ a:hover{
 .list{
     list-style: none;
     font-size: 1rem;
+    width: 100%
 }
 .distance{
     margin-top: 30px;
 }
 .button-width{
     margin-left: 40px;
-    width: 30%;
-    text-align: center;
+    width: 20%;
 }
 .input-width{
     width: 15%;
 }
 .box-size{
     height: 1000px;
+}
+.box-li {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+}
+.box-menu{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.box-list-menu{
+    width: 30%;
+    margin: 0 0 2%;
+}
+.box-add{
+    width: 10%;
+}
+.box-delete{
+    width: 20%;
+}
+.button-add {
+    margin: 2% 0 3%;
+}
+.box-button{
+    width: 100%;
+    margin-top: 10px;
+    margin: 20px;
+}
+.box-total{
+    margin-top: 10px;
 }
