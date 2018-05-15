@@ -5,6 +5,8 @@ import Add from './Add'
 import Show from './Show'
 import Random from './Random'
 import ButtonCustom from './Button'
+import Showlist from '../src/layout/Show'
+
 
 class App extends Component {
   constructor() {
@@ -37,7 +39,7 @@ class App extends Component {
     pushList.push(addList)
     this.setState({
       showList: this.state.showList.concat(pushList),
-      total: this.state.total +parseInt(price)
+      total: this.state.total + parseInt(price)
     })
     // console.log(this.state.showList)
     //total
@@ -56,7 +58,7 @@ class App extends Component {
     });
   }
 
-  deleteMenu = (index,value) => {
+  deleteMenu = (index, value) => {
     // console.log('index', index)
     const arr = [...this.state.lists]
     // console.log(arr)
@@ -86,7 +88,7 @@ class App extends Component {
     }
     this.setState({
       showList: this.state.showList.concat(this.state.randomlist),
-      total: this.state.total + this.state.totalRandom.reduce((sum,value)=> sum+value),
+      total: this.state.total + this.state.totalRandom.reduce((sum, value) => sum + value),
       randomlist: [],
       totalRandom: []
     })
@@ -111,7 +113,7 @@ class App extends Component {
       let list = []
       list.push(menu)
       this.setState({
-        lists: this.state.lists.concat(list),      
+        lists: this.state.lists.concat(list),
       })
     }
   }
@@ -142,22 +144,27 @@ class App extends Component {
               onChangeName={this.onChangeName}
               onChangePrice={this.onChangePrice}
             />
-             <Random
-                randommenu={this.randommenu}
-                setStateNumberRandom={this.setStateNumberRandom}
-              />
-            </div>       
-          <div className="box-two">
-            <Show
-              showList={this.state.showList}
-              total={this.state.total}
-              deleteList={this.deleteList}
-            >
-            <ButtonCustom 
-             valueButton={'Clear'} evt={this.clearAll}  
-             />
-            </Show>
+            <Random
+              randommenu={this.randommenu}
+              setStateNumberRandom={this.setStateNumberRandom}
+            />
           </div>
+          <Showlist>
+          <div className="box-two">
+           
+              <Show
+                showList={this.state.showList}
+                total={this.state.total}
+                deleteList={this.deleteList}
+              >
+
+                <ButtonCustom
+                  valueButton={'Clear'} evt={this.clearAll}
+                />
+              </Show>
+          
+          </div>
+          </Showlist>
 
         </div>
       </div>
