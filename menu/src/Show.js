@@ -4,7 +4,7 @@ import { Button } from 'antd';
 class Show extends Component {
     render() {
         return (
-            <div className="box-li">
+            <div className="box-li" style={{marginTop: '10%'}}>
             <div>
             <div>
              {this.props.children}
