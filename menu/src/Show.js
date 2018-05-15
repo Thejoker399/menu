@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ButtonCustom from './Button';
-
+import { Button } from 'antd';
 class Show extends Component {
     render() {
         return (
