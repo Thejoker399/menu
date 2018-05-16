@@ -16,7 +16,7 @@ class Add extends Component {
     //     });
     // }
     handleCancel = (e) => {
-        console.log(e);
+        // console.log(e);
         this.setState({
             visible: false,
         });
@@ -59,7 +59,7 @@ class Add extends Component {
                                         <div className="box-add">
                                             <ButtonCustom
                                                 valueButton={'+'}
-                                                evt={this.props.addListShow}
+                                                onClick={this.props.addListShow}
                                                 index={index}
                                                 value={value}
                                             />
@@ -71,7 +71,7 @@ class Add extends Component {
                                             <ButtonCustom
                                                 type="danger"
                                                 valueButton={'ลบ'}
-                                                evt={this.props.deleteMenu}
+                                                onClick={this.props.deleteMenu}
                                                 index={index}
                                             />
                                         </div>
@@ -80,11 +80,14 @@ class Add extends Component {
                             })
                         }
                         <div className="input-width">
-                         <Input   
-                          type='number' min="1" 
-                         onChange={this.props.setStateNumberRandom}/>
-                         {this.props.children}
-                         </div>
+                            <Input
+                                type='number' min="1"
+                                onChange={this.props.setStateNumberRandom} />
+                            <ButtonCustom
+                                valueButton={'Random'}
+                                onClick={this.props.randommenu}
+                            />
+                        </div>
 
                     </ul>
                 </div>
@@ -92,6 +95,10 @@ class Add extends Component {
                     @import url('https://fonts.googleapis.com/css?family=Prompt');
                     .font {
                         font-family: 'Prompt', sans-serif;
+                    }
+                    .ant-input {
+                        width: 40%;
+                        margin-right: 10%;
                     }
                     `}
                 </style>

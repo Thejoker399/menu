@@ -63,29 +63,31 @@ class App extends Component {
     });
   }
 
-  setStateNumberRandom = (evt) => {
+  setStateNumberRandom = (event) => {
     this.setState({
-      numberRandom: evt.target.value
+      numberRandom: event.target.value
     })
   }
 
   randommenu = (event) => {
     const newlist = this.state.lists
+    if (this.state.numberRandom>0) {
     for (let i = 0; i < this.state.numberRandom; i++) {
       let randomlist = Math.floor(Math.random() * newlist.length);
       let arr = this.state.randomlist
       let totalRandom = this.state.totalRandom
       this.setState({
         randomlist: arr.push(newlist[randomlist]),
-        totalRandom: totalRandom.push(newlist[randomlist].price)
+        totalRandom: totalRandom.push(newlist[randomlist].price),
       })
     }
     this.setState({
       showList: this.state.showList.concat(this.state.randomlist),
       total: this.state.total + this.state.totalRandom.reduce((sum, value) => sum + value),
       randomlist: [],
-      totalRandom: []
+      totalRandom: [],
     })
+  }
   }
 
   onChangeName = (event) => {
@@ -137,11 +139,8 @@ class App extends Component {
                 // randommenu={this.randommenu}
                 onChangeName={this.onChangeName}
                 onChangePrice={this.onChangePrice}
+                randommenu={this.randommenu}
               />
-               <ButtonCustom
-                  valueButton={'Random'}
-                   evt={this.randommenu}
-                />
             </Index>
 
           </div>
@@ -153,7 +152,7 @@ class App extends Component {
               >
 
                 <ButtonCustom
-                  valueButton={'Clear'} evt={this.clearAll}
+                  valueButton={'Clear'} onClick={this.clearAll}
                 />
               </Show>
           </Showlist>
