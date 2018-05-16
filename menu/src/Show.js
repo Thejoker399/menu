@@ -23,7 +23,7 @@ class Show extends Component {
                                     <ButtonCustom
                                         type="danger"
                                         valueButton={'ลบ'}
-                                        evt={this.props.deleteList}
+                                        onClick={this.props.deleteList}
                                         index={index}
                                         value={value}
                                     />
