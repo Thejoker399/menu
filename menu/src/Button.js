@@ -6,7 +6,10 @@ class Buttons extends Component {
 
         return (
             <div>
-                <Button type={this.props.type} onClick={() => this.props.evt(this.props.index,this.props.value)}> {this.props.valueButton} </Button>
+                <Button type={this.props.type} onClick={() => 
+                    this.props.onClick(this.props.index,this.props.value)}>
+                     {this.props.valueButton} 
+                     </Button>
             <style global jsx> {`
                 .ant-btn-danger {
                     background-color: #fff;
