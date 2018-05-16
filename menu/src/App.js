@@ -108,7 +108,7 @@ class App extends Component {
 
   addlist = (event) => {
     event.preventDefault()
-    if (this.state.name !== '' && this.state.price !== '') {
+    if (this.state.name !== '' && this.state.price !== ''&& this.state.price >0 ) {
       const name = this.state.name
       const price = this.state.price
       const menu = { name, price }
