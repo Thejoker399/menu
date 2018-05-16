@@ -75,7 +75,7 @@ a:hover{
     flex-direction: row;
 }
 .box-list-menu{
-    width: 33%;
+    width: 40%;
     margin: 2% 0 2%;
 }
 .box-add{
@@ -97,4 +97,7 @@ a:hover{
 }
 .box-buttonrandom{
     margin-left: 10%
+}
+.ant-btn-danger {
+    background-color: #fff;
 }

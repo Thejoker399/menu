@@ -72,14 +72,20 @@ class Add extends Component {
                                                 type="danger"
                                                 valueButton={'ลบ'}
                                                 evt={this.props.deleteMenu}
-                                                index={index} value={value}
+                                                index={index}
                                             />
                                         </div>
                                     </div>
                                 </li>
-
                             })
                         }
+                        <div className="input-width">
+                         <Input   
+                          type='number' min="1" 
+                         onChange={this.props.setStateNumberRandom}/>
+                         {this.props.children}
+                         </div>
+
                     </ul>
                 </div>
                 <style jsx> {`

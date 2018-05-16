@@ -3,10 +3,9 @@ import Header from './Header.js';
 import './App.css';
 import Add from './Add'
 import Show from './Show'
-import Random from './Random'
 import ButtonCustom from './Button'
 import Index from '../src/layout/index'
-import Showlist from '../src/layout/Show'
+import Showlist from '../src/layout/show'
 
 class App extends Component {
   constructor() {
@@ -34,24 +33,19 @@ class App extends Component {
   addListShow = (index, value) => {
     let addList = value
     let price = value.price
-    // console.log(addList)
     let pushList = []
     pushList.push(addList)
     this.setState({
       showList: this.state.showList.concat(pushList),
       total: this.state.total + parseInt(price)
     })
-    // console.log(this.state.showList)
-    //total
-    console.log(this.state.total)
+
   }
 
   deleteList = (index, value) => {
     let price = value.price
     let arr = [...this.state.showList]
-    // console.log(arr)
     arr.splice(index, 1);
-    // console.log(arr)
     this.setState({
       showList: arr,
       total: this.state.total - price
@@ -119,10 +113,10 @@ class App extends Component {
   }
 
   clearAll = () => {
-    let clearlist = this.state.showList
-    clearlist.splice(0, clearlist.length)
+    // let clearlist = this.state.showList
+    // clearlist.splice(0, clearlist.length)
     this.setState({
-      showList: clearlist,
+      showList: [],
       total: 0
     })
   }
@@ -133,7 +127,7 @@ class App extends Component {
         <Header />
         <div className="box">
           <div className="box-one">
-          <Index>
+            <Index>
               <Add
                 addlist={this.addlist}
                 list={this.state.lists}
@@ -144,16 +138,14 @@ class App extends Component {
                 onChangeName={this.onChangeName}
                 onChangePrice={this.onChangePrice}
               />
-              <Random
-                randommenu={this.randommenu}
-                setStateNumberRandom={this.setStateNumberRandom}
-              />
-              </Index>
-            
+               <ButtonCustom
+                  valueButton={'Random'}
+                   evt={this.randommenu}
+                />
+            </Index>
+
           </div>
           <Showlist>
-          <div >
-           
               <Show
                 showList={this.state.showList}
                 total={this.state.total}
@@ -164,25 +156,23 @@ class App extends Component {
                   valueButton={'Clear'} evt={this.clearAll}
                 />
               </Show>
-          </div>
-          
           </Showlist>
-            
-          </div>
-         
-            
 
-          
-          <style jsx> {`
+        </div>
+
+
+
+
+        <style jsx> {`
           @import url('https://fonts.googleapis.com/css?family=Prompt');
           .font {
             font-family: 'Prompt', sans-serif;
           }
           `}
-          </style>
-        </div>
-        );
-      }
-    }
-    
-    export default App;
+        </style>
+      </div>
+    );
+  }
+}
+
+export default App;
